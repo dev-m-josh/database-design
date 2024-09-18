@@ -40,7 +40,7 @@ CREATE TABLE users (
     user_id INT PRIMARY KEY IDENTITY(1, 1),
     user_name VARCHAR(50),
     user_email VARCHAR(200),
-    user_password VARCHAR(50),
+    user_password VARCHAR(255),
     user_address VARCHAR(50)
 )
 
