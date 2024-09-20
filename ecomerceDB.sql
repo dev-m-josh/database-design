@@ -118,7 +118,7 @@ SELECT * FROM shopping_cart;
 ---ORDERS
 CREATE TABLE orders(
     order_id INT PRIMARY KEY IDENTITY(1, 1),
-    user_id INT FOREIGN KEY REFERENCES users(user_id),
+    user_orders INT FOREIGN KEY REFERENCES shopping_cart(shopping_cart_id),
     order_date TIMESTAMP
 )
 
