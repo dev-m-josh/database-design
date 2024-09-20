@@ -64,7 +64,9 @@ INSERT INTO products_category(category_name)
 VALUES  ('cars'),
         ('shoes'),
         ('clothes'),
-        ('accesories')
+        ('accesories'),
+        ('furniture'),
+        ('utensils')
 
 SELECT * FROM products_category;
 
@@ -85,6 +87,20 @@ VALUES(1, 'probox', 'A commercial and durable vehicle', 'image_url'),
         (4, 'lenovo', 'A portable and fast laptop', 'image_url')
 
 SELECT * FROM products;
+
+---JOIN TWO TABLES USING INNER JOIN
+SELECT * 
+FROM products_category
+INNER JOIN products
+ON products_category.category_id = products.category_id
+
+
+---JOIN TWO TABLES USING LEFT JOIN
+SELECT * ---category_name, product_id, product_name, product_description
+FROM products_category
+LEFT JOIN products
+ON products_category.category_id = products.category_id
+
 
 ----products added to cart by users
 CREATE TABLE cart(
