@@ -101,6 +101,12 @@ FROM products_category
 LEFT JOIN products
 ON products_category.category_id = products.category_id
 
+---JOIN TWO TABLES USING RIGHT JOIN
+SELECT * ---category_name, product_id, product_name, product_description
+FROM products
+RIGHT JOIN products_category
+ON products_category.category_id = products.category_id
+
 
 ----products added to cart by users
 CREATE TABLE cart(
